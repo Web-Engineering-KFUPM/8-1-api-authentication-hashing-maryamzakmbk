@@ -1,0 +1,35 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=WebStorm
+
+### 🟢 Register user
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "email": "student@example.com",
+  "password": "mypassword123"
+}
+
+###
+
+### 🟠 Login user
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "student@example.com",
+  "password": "mypassword123"
+}
+
+###
+
+### 🔵 Get Weather (requires token)
+# ⚠️ After running the Login request, copy the token from the response
+# Then replace <YOUR_TOKEN_HERE> below 👇
+GET http://localhost:3000/weather?city=Riyadh
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN0dWRlbnRAZXhhbXBsZS5jb20iLCJpYXQiOjE3NjQxNDgzMzUsImV4cCI6MTc2NDE1MTkzNX0.vy1W427Bc47X3QWSl1X3Ex2gGFTfldBS8HBt_nrcy4w"
+
+
+
+
